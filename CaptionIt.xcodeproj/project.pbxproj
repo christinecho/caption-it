@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDBA922E1CEFC0A200C50A9E /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = CDBA922D1CEFC0A200C50A9E /* AppIcon.appiconset */; };
+		CDC7921D1CE68230009B4F4C /* Quotes.xml in Resources */ = {isa = PBXBuildFile; fileRef = CDC7921C1CE68230009B4F4C /* Quotes.xml */; };
 		CDFAE1931CC5421F00D30FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFAE1921CC5421F00D30FA9 /* AppDelegate.swift */; };
 		CDFAE1951CC5421F00D30FA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFAE1941CC5421F00D30FA9 /* ViewController.swift */; };
 		CDFAE1981CC5421F00D30FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDFAE1961CC5421F00D30FA9 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDBA922D1CEFC0A200C50A9E /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = "../../../../Downloads/Material Icons_e244(0)_180/ios/AppIcon.appiconset"; sourceTree = "<group>"; };
+		CDC7921C1CE68230009B4F4C /* Quotes.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Quotes.xml; path = "../../../../Downloads/var 2/www/vhosts/quotationsbook.com/application/current/public_html/Quotes.xml"; sourceTree = "<group>"; };
 		CDFAE18F1CC5421F00D30FA9 /* CaptionIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptionIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFAE1921CC5421F00D30FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDFAE1941CC5421F00D30FA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +104,9 @@
 				CDFAE1921CC5421F00D30FA9 /* AppDelegate.swift */,
 				CDFAE1941CC5421F00D30FA9 /* ViewController.swift */,
 				CDFAE1961CC5421F00D30FA9 /* Main.storyboard */,
+				CDC7921C1CE68230009B4F4C /* Quotes.xml */,
 				CDFAE1991CC5421F00D30FA9 /* Assets.xcassets */,
+				CDBA922D1CEFC0A200C50A9E /* AppIcon.appiconset */,
 				CDFAE19B1CC5421F00D30FA9 /* LaunchScreen.storyboard */,
 				CDFAE19E1CC5421F00D30FA9 /* Info.plist */,
 			);
@@ -230,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDFAE19D1CC5421F00D30FA9 /* LaunchScreen.storyboard in Resources */,
+				CDC7921D1CE68230009B4F4C /* Quotes.xml in Resources */,
 				CDFAE19A1CC5421F00D30FA9 /* Assets.xcassets in Resources */,
+				CDBA922E1CEFC0A200C50A9E /* AppIcon.appiconset in Resources */,
 				CDFAE1981CC5421F00D30FA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +406,7 @@
 		CDFAE1B81CC5422000D30FA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				INFOPLIST_FILE = CaptionIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChristineCho.CaptionIt;
@@ -409,7 +417,7 @@
 		CDFAE1B91CC5422000D30FA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				INFOPLIST_FILE = CaptionIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChristineCho.CaptionIt;
@@ -484,6 +492,7 @@
 				CDFAE1B91CC5422000D30FA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDFAE1BA1CC5422000D30FA9 /* Build configuration list for PBXNativeTarget "CaptionItTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				CDFAE1BC1CC5422000D30FA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDFAE1BD1CC5422000D30FA9 /* Build configuration list for PBXNativeTarget "CaptionItUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				CDFAE1BF1CC5422000D30FA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
