@@ -4,7 +4,6 @@
 //
 //  Created by 17ocho on 4/18/16.
 //  Copyright © 2016 Christine Cho. All rights reserved.
-//
 
 /* bugs to fix
 * 1. When keyword is not in database
@@ -21,7 +20,6 @@ class ViewController: UITableViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
     }
 
@@ -33,7 +31,6 @@ class ViewController: UITableViewController
     
     //Getting values in api with keyword
     @IBAction func getValue(sender: AnyObject) {
-        //clear captions array so when user searches again, it won't display movies based on past keywords
         let userNameValue = userNameTextField.text
         
         if isStringEmpty(userNameValue!) == true {
@@ -42,7 +39,8 @@ class ViewController: UITableViewController
         
         // Send HTTP GET Request
         let searchWord = userNameValue!
-        let tomatoesURL = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=56vedqj7hdewt45xt8kr485h&q=\(searchWord)&page_limit=50"
+        //need to get my own key
+        let tomatoesURL = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=56vedqj7hdewt45xt8kr485h&q=\(searchWord)&page_limit=30"
         //let tomatoesURL = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/current_releases.json?q=dog&apikey=56vedqj7hdewt45xt8kr485h"
         //print(tomatoesURL)
         //let urlWithParams = scriptUrl + "?userName=\(userNameValue!)"
@@ -77,42 +75,29 @@ class ViewController: UITableViewController
             //let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             //print("responseString = \(responseString)")
             
-            
             // Convert server json response to NSDictionary
             do {
                 //self.captions = []
+                self.captions.removeAll()
+                self.tableView.reloadData()
                 if let convertedJsonIntoDict = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
-                    
-                    // Print out dictionary
-                    //print(convertedJsonIntoDict)
                     
                     // Rotten Tomatoes parsing part
                     if let movieArray = convertedJsonIntoDict["movies"] as? NSArray {
                         for movieDataContainer in movieArray {
-                            if let movieData = movieDataContainer as? NSDictionary {
-                                //print(movieData["title"]!) //Add each title string to the array you use to populate the table
-                                
+                            if let movieData = movieDataContainer as? NSDictionary {                                
                                 //adding movies with keyword to captions array
                                 self.captions.append((movieData["title"] as? NSString)!)
                                 let indexPath = NSIndexPath(forRow: self.captions.count-1, inSection: 0)
                                 self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-                                print("Updating")
-
                             } else {
                                 print("Error getting movie information")
                             }
                         }
                     }
                     print(self.captions)
-                    self.captions = []
+                    //clear captions array so when user searches again, it won't display movies based on past keywords
                 }
-                
-                
-                
-                
-                // old parsing part
-                //let firstNameValue = convertedJsonIntoDict["userName"] as? String
-                //print(firstNameValue!)
                 
             } catch let error as NSError {
                 print(error.localizedDescription)
