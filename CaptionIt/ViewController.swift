@@ -39,15 +39,12 @@ class ViewController: UITableViewController
         
         // Send HTTP GET Request
         let searchWord = userNameValue!
-        //need to get my own key
-        let tomatoesURL = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=56vedqj7hdewt45xt8kr485h&q=\(searchWord)&page_limit=30"
-        //let tomatoesURL = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/current_releases.json?q=dog&apikey=56vedqj7hdewt45xt8kr485h"
-        //print(tomatoesURL)
-        //let urlWithParams = scriptUrl + "?userName=\(userNameValue!)"
+        let tomatoesURL = cannot show due to api key
         //let myUrl = NSURL(string: urlWithParams)
         let myUrl = NSURL(string: tomatoesURL)
         let request = NSMutableURLRequest(URL:myUrl!)
         request.HTTPMethod = "GET"
+    
         
         // Add Basic Authorization
         /*
